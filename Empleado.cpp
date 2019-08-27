@@ -68,4 +68,23 @@ void revisionAleatoria(bool &bandera){
 		bandera=false;
 	}
 }
+int numeroEmpleado(){
+	srand(time(NULL));
+	return (rand()%100+1);
+}
+string toString() {
+	stringstream s;
+	s<<endl<<endl;
+	s<<"Empleado:"<<numeroEmpleado<<endl;
+	s<<"Nombre:"<<nombre<<endl;
+	s<<" ";
+	s<<"Años de experiencia:"<<anExp<<endl;
+	s<<" ";
+	s<<"Salario Inicial:" <<salarioBase<<endl;
+	s<<" ";
+	s<<"Salario Acumulado:"<<aumentoSalarial(float &salarioBase,int &anExp)<<endl;	
+	s<<" ";
+	s<<"Necesita revison:"<<revisionAleatoria(bool &bandera)<<endl<<endl;
+	return s.str();
+}
 	
