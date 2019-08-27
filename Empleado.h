@@ -47,6 +47,8 @@ public:
 	int getAnEx(); 
 	void setSalarioBase(float);
 	float getSalarioBase();
+	int numeroEmpleado();
+	string toString();
 	
 	
 };
