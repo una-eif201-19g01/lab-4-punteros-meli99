@@ -48,7 +48,7 @@ float Empleado::getSalarioBase() {
 	return salarioBase; 
 }
 //metodos
-float aumentoSalarial(float &salarioBase, int &anExp){
+float Empleado::aumentoSalarial(float &salarioBase, int &anExp){
 	float salarioAumentado=0;
 	if(anExp==1||anExp<3){
 		salarioAumentado=salarioBase*0.02;
@@ -57,7 +57,7 @@ float aumentoSalarial(float &salarioBase, int &anExp){
 	}
 	return salarioAumentado;
 }
-void revisionAleatoria(bool &bandera){
+void Empleado::revisionAleatoria(bool &bandera){
 	int random=0;
 	srand(time(NULL));
 	ramdon=(rand()%2);
@@ -68,11 +68,11 @@ void revisionAleatoria(bool &bandera){
 		bandera=false;
 	}
 }
-int numeroEmpleado(){
+int Empleado::numeroEmpleado(){
 	srand(time(NULL));
 	return (rand()%100+1);
 }
-string toString() {
+string Empleado::toString() {
 	stringstream s;
 	s<<endl<<endl;
 	s<<"Empleado:"<<numeroEmpleado<<endl;
