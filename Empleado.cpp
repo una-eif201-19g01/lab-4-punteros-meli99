@@ -13,5 +13,59 @@
  * =====================================================================================
  */
 
-
-
+#include "Empleado.h"
+//constructor
+Empleado::Empleado(){
+		nombre="";
+		anExp=0;
+		numeroEmpleado=0;
+		salarioBase=0;
+		bandera=true;
+}
+//set y gets
+void Empleado::setNombre(string nombre){
+	nombre = nombre; 
+}
+string Empleado::getNombre(){ 
+	return nombre; 
+}
+void Empleado::setNumeroEmpleado(int numero) { 
+	numeroEmpleado = numero; 
+}
+int Empleado::getNumeroEmpleado() { 
+	return numeroEmpleado; 
+}
+void Empleado::setAnEx(int anEx) { 
+	anExp = anEx; 
+}
+int Empleado::getAnEx() { 
+	return anExp; 
+}
+void Empleado::setSalarioBase(float salario) { 
+	salarioBase = salario; 
+}
+float Empleado::getSalarioBase() { 
+	return salarioBase; 
+}
+//metodos
+float aumentoSalarial(float &salarioBase, int &anExp){
+	float salarioAumentado=0;
+	if(anExp==1||anExp<3){
+		salarioAumentado=salarioBase*0.02;
+	}else{
+		salarioAumentado=salarioBase*0.05;		
+	}
+	return salarioAumentado;
+}
+void revisionAleatoria(bool &bandera){
+	int random=0;
+	srand(time(NULL));
+	ramdon=(rand()%2);
+	if(random==1){
+		bandera=true;
+	}
+	else{
+		bandera=false;
+	}
+}
+	

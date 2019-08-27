@@ -19,6 +19,37 @@
 
 
 #include <string>
+#include <iostream>
+#include<stdlib.h>
+#include<time.h>
+#include <sstream>
+#include <windows.h>
+using std::string;
+class Empleado {
+protected:
+	string nombre;
+	int numeroEmpleado;
+	int anExp;
+	float salarioBase;
+	bool bandera;
+private:
+	
+	float aumentoSalarial(float &salarioBase,int &anExp);
+	void revisionAleatoria(bool &bandera);
+	
+public:
+	Empleado();
+	void setNombre(string);
+	string getNombre();
+	void setNumeroEmpleado(int );
+	int getNumeroEmpleado();
+	void setAnEx(int);
+	int getAnEx(); 
+	void setSalarioBase(float);
+	float getSalarioBase();
+	
+	
+};
 
 
 #endif //EMPLEADOPUNTEROS_EMPLEADO_H
