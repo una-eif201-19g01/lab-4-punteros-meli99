@@ -26,6 +26,7 @@ int main() {
 	std::cout<<"El aumento salarial es de:"<<datos.aumentoSalarial(float &salarioBase,int &anExp)<<std::endl;
 	std::cout<<"El empleado necesita revision:"<<datos.revisionAleatoria(bool &bandera)<<std::endl;
 	std::cout<<"Los datos completos son:"<<datos.toString()<<std::endl;
+	break;
 	}
     //Empleado empleado[3];
     //empleado[0].setNombre("Mike");
@@ -59,6 +60,7 @@ int main() {
 	std::cout<<"Salario Inicial [ 800000.000000 ]"<<std::endl;
 	std::cout<<"Salario Acumulado [ 816000.000000 ]"<<std::endl;
 	std::cout<<"Necesita revision [ Si ]"<<std::endl;
+	break;
 	}}
 	}while(opcion==3){
 	std::cout<<"Adios"<<std::endl;
